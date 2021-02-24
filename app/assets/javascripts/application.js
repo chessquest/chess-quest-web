@@ -13,4 +13,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery/dist/jquery
+//= require @chrisoakman/chessboardjs/dist/chessboard-1.0.0
+//= require chess.js/chess
 //= require_tree .
