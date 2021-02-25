@@ -58,9 +58,9 @@
 
 Welcome to Chess Quest! This repository contains our frontend Rails app. This app makes calls to the [backend Rails API](https://github.com/chessquest/chess-quest), which makes use of a [Sinatra microservice](https://github.com/chessquest/chess-api) to retrieve data from the Chess.com API.
 
-## Screenshots
+### User Interface
 
-Placeholder for screenshots of the user interface.
+Placeholder for screenshots/videos/gifs of the user interface.
 
 ### Built With
 
@@ -72,14 +72,14 @@ This section should list any major frameworks that you built your project using.
 * [OAuth](https://oauth.net/)
 * [PostgreSQL](https://www.postgresql.org/)
 
+### OAuth Usage
+
+W.I.P. - discussion on our Google Oauth usage. Why we used it.
+
 <!-- SYSTEM DESIGN -->
 ## System Design
 
 W.I.P - Screenshots of system diagram
-
-## OAuth Usage
-
-W.I.P. - discussion on our Google Oauth usage. Why we used it.
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -92,8 +92,7 @@ W.I.P. - Versions, dependencies, etc.
 
 ### Installation
 
-W.I.P. - Steps to install
-
+W.I.P. - Steps to install the frontend app.
 
 If you don't have yarn installed locally, you can use Homebrew:
 `brew install yarn`
