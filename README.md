@@ -108,6 +108,10 @@ Run `rake assets:precompile` to compile the chess-related assets to allow them t
 
 W.I.P. Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
+Chess.js documentation for chessboard methods can be found in the readme [here!](https://github.com/jhlywa/chess.js/)
+
+Chessboardjs documentation with examples of implementation with chess.js can be found [here!](https://chessboardjs.com/docs)
+
 <!-- ROADMAP -->
 ## Roadmap
 
