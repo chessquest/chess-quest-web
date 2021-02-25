@@ -58,6 +58,10 @@
 
 Welcome to Chess Quest! This repository contains our frontend Rails app. This app makes calls to the [backend Rails API](https://github.com/chessquest/chess-quest), which makes use of a [Sinatra microservice](https://github.com/chessquest/chess-api) to retrieve data from the Chess.com API.
 
+## Screenshots
+
+Placeholder for screenshots of the user interface.
+
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
@@ -65,12 +69,17 @@ This section should list any major frameworks that you built your project using.
 * [Sinatra](http://sinatrarb.com/)
 * [chessboard.js](https://chessboardjs.com/)
 * [chess.js](https://github.com/jhlywa/chess.js)
+* [OAuth](https://oauth.net/)
 * [PostgreSQL](https://www.postgresql.org/)
 
 <!-- SYSTEM DESIGN -->
 ## System Design
 
 W.I.P - Screenshots of system diagram
+
+## OAuth Usage
+
+W.I.P. - discussion on our Google Oauth usage. Why we used it.
 
 <!-- GETTING STARTED -->
 ## Getting Started
