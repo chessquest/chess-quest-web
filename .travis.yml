@@ -4,11 +4,11 @@ rbenv:
 addons:
   postgresql: 9.6
 script:
+- yarn
 - RAILS_ENV=test bundle exec rake db:test:prepare --trace
 - bundle exec rspec
 deploy:
   provider: heroku
   app:
-  run: yarn
   run: rails db:migrate
   run: rake assets:precompile
