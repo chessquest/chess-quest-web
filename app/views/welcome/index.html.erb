@@ -4,9 +4,10 @@
 Thunderdome meets Hearthstone Arena meets Chess. Welcome to CHESS QUEST! Your journey starts with only the pieces remaining from a game! How far will your quest take you?
 </section>
 
-<%= link_to 'Sign In With Google', user_google_oauth2_omniauth_authorize_path, method: :post %>
 
-<div id="myBoard" style="width: 800px"></div>
-<script>
-board = Chessboard('myBoard', config)
-</script>
+<div class="d-flex justify-content-center pt-5">
+  <div id="myBoard" style="width: 800px"></div>
+  <script>
+    board = Chessboard('myBoard', config)
+  </script>
+</div>
