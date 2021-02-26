@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'figaro'
+gem 'faraday'
 gem 'mini_racer', platforms: :ruby
 gem 'devise'
 gem 'omniauth', '~> 1.9'

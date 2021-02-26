@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   namespace :users do
     get '/:id/dashboard', to: 'dashboard#show', as: 'dashboard'
+    get '/:id/quests', to: 'quests#create', as: 'new_quest'
   end
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
   devise_scope :user do
