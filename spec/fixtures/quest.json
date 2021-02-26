@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "1",
+    "type": "quest",
+    "attributes": {
+      "status": "in_progress",
+      "user_id": "12",
+      "name": "Orcs on the Run"
+    }
+  }
+}
