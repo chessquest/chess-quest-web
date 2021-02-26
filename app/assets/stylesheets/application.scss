@@ -14,14 +14,27 @@
  *= require_self
  */
 
-  .flash__alert   {
-   color: red; 
-  }
- 
-  .flash__notice  {
-    color: blue;
-  }
- 
-  .flash__success {
-    color: green;
-  }
+@import "bootstrap";
+
+@font-face {
+  font-family: 'Open-Dyslexic';
+  src: url(asset-path('OpenDyslexicMono-Regular.otf')) format("truetype");
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: 'Open-Dyslexic';
+}
+
+
+.flash__alert   {
+ color: red;
+}
+
+.flash__notice  {
+  color: blue;
+}
+
+.flash__success {
+  color: green;
+}
