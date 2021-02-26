@@ -69,6 +69,16 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
+def stub_current_quest_doesnt_exist
+  stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{current_user.id}/quests?status=in_progress").
+        to_return(status: 200, body: "")
+end
+
+def stub_current_quest_exists
+  stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{current_user.id}/quests?status=in_progress").
+    to_return(status: 200, body: json_response)
+end
+
 def stub_omniauth
   OmniAuth.config.test_mode = true
   omniauth_google_hash = {
