@@ -33,15 +33,11 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'figaro'
-gem 'devise'
-gem 'omniauth'
+gem 'devise', github: 'heartcombo/devise', branch: 'ca-omniauth-2'
+gem 'omniauth', '~> 1.9'
 gem 'omniauth-google-oauth2'
-gem 'bootstrap'
-gem 'autoprefixer-rails', '~> 7.1.6'
+gem 'bootstrap', '~> 4.5'
 gem 'mini_racer', platforms: :ruby
-
-
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
