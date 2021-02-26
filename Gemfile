@@ -36,8 +36,8 @@ gem 'figaro'
 gem 'devise', github: 'heartcombo/devise', branch: 'ca-omniauth-2'
 gem 'omniauth', '~> 1.9'
 gem 'omniauth-google-oauth2'
-gem 'bootstrap', '~> 4.5'
 gem 'mini_racer', platforms: :ruby
+gem 'bootstrap', '~> 4.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
