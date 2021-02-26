@@ -41,7 +41,7 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
 
       json_response = File.read("./spec/fixtures/quest.json")
       stub_request(:post, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests").
-        to_return(status: 200, body: json_response)exit
+        to_return(status: 200, body: json_response)
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=in_progress").
         to_return(status: 200, body: json_response)
       
