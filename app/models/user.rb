@@ -6,4 +6,7 @@ class User < ApplicationRecord
   def self.from_google(email:, uid:)
     create_with(uid: uid).find_or_create_by!(email: email) 
   end
+
+  # def quests
+  # end
 end
