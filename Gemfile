@@ -34,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'figaro'
 gem 'devise'
-gem 'omniauth', '~> 1.9'
+gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'bootstrap'
 # Reduces boot times through caching; required in config/boot.rb
