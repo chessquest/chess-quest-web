@@ -1,2 +1,7 @@
 <h1>User Dashboard</h1>
 <h2>Welcome to Chess Quest, <%= current_user.email %>!</h2>
+
+<%# placeholder button for create quest when we have route %>
+<%= button_to 'Start Quest', users_dashboard_path(current_user), method: :get %>
+
+<%= link_to 'Sign Out', destroy_user_session_path %>
