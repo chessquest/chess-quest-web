@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'figaro'
-gem 'devise', github: 'heartcombo/devise', branch: 'ca-omniauth-2'
+gem 'devise'
 gem 'omniauth', '~> 1.9'
 gem 'omniauth-google-oauth2'
 gem 'bootstrap'
