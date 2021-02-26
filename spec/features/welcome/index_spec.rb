@@ -6,8 +6,7 @@ describe 'Welcome Index', type: :feature do
     
     expect(page).to have_content('Welcome')
     expect(page).to have_content('Sign In With Google')
-    # click_link 'Sign In With Google'
-    # expect(current_path).to be(user_google_oauth2_omniauth_authorize_path)
+    expect(page).to have_css('.description')
   end
 
   it 'logs the user in via google mock' do
