@@ -62,6 +62,8 @@ Welcome to Chess Quest! This repository contains our frontend Rails app. This ap
 
 Placeholder for screenshots/videos/gifs of the user interface.
 
+![Wireframes](wireframes.png)
+
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
