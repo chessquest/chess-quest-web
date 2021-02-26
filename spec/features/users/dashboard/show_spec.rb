@@ -26,12 +26,10 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
 
       click_link 'Sign In With Google'      
 
-      click_button 'Start Quest'
-
       expect(current_path).to eq(users_dashboard_path(@user))
-      # expect(page).to_not have_button('Start Quest')
-      # expect(page).to have_css('.current-quest')
-      # expect(page).to have_button('Start Game')
+      expect(page).to_not have_button('Start Quest')
+      expect(page).to have_css('.current-quest')
+      expect(page).to have_button('Start Game')
     end
   end
 end

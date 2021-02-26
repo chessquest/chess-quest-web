@@ -9,6 +9,8 @@ class Users::DashboardController < ApplicationController
     return @current_quest = nil if response.body.blank?
 
     data = JSON.parse(response.body, symbolize_names: true)
-    @current_quest = data
+    @current_quest = Quest.new(data)
+
+    @current_game = nil
   end
 end

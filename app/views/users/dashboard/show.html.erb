@@ -1,8 +1,17 @@
 <h1>User Dashboard</h1>
 <h2>Welcome to Chess Quest, <%= current_user.email %>!</h2>
 
-<%# placeholder button for create quest when we have route %>
+  <% if @current_quest.nil? %>
+    <%# placeholder button for create quest when we have route %>
+    <%= button_to 'Start Quest', users_dashboard_path(current_user), method: :get %>
+  <% else %>
+    <section class='current-quest'>
+    <%= @current_quest.name %>
+    <% if @current_game.nil? %>
+      <%= button_to 'Start Game' %>
+      <%# button_to 'Start Game', users_gameplay_path(current_user) %>
+    <% end %>
+    </section>
+  <% end %>
 
-<%= button_to 'Start Quest', users_dashboard_path(current_user), method: :get %>
-
-<%= link_to 'Sign Out', destroy_user_session_path %>
+<%# link_to 'Sign Out', destroy_user_session_path %>
