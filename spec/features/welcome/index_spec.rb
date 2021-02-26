@@ -4,6 +4,7 @@ describe 'the app is up' do
   it 'when I visit root' do
     visit root_path
 
-    expect(page).to have_content('chess')
+    expect(page).to have_content('Welcome')
+    expect(page).to have_content('Sign In With Google')
   end
 end
