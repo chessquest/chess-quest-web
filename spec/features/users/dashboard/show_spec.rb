@@ -8,8 +8,9 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
     end
 
     it 'displays button to create new quest if no quest is ongoing' do
+      json_response = File.read("./spec/fixtures/no_quests.json")
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=in_progress").
-        to_return(status: 200, body: "")
+        to_return(status: 200, body: json_response)
       visit root_path
 
       click_link 'Sign In With Google'
@@ -33,8 +34,9 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
     end
 
     it "allows you to create a new quest" do
+      json_response = File.read("./spec/fixtures/no_quests.json")
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=in_progress").
-        to_return(status: 200, body: "")
+        to_return(status: 200, body: json_response)
       visit root_path
 
       click_link 'Sign In With Google'

@@ -9,9 +9,9 @@ class Users::DashboardController < ApplicationController
     data = JSON.parse(response.body, symbolize_names: true)
     return @quests = nil if data[:data].blank?
 
-    data = data[:data]
+    # data = data[:data]
 
-    @quests = data.map do |datum|
+    @quests = data[:data].map do |datum|
       Quest.new(datum)
     end
 
