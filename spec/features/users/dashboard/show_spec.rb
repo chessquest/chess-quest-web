@@ -63,7 +63,7 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
 
       json_response = File.read("./spec/fixtures/game.json")
 
-      stub_request(:post, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/games?name=magnus").
+      stub_request(:post, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/games?find_player=magnus").
         to_return(status: 200, body: json_response)
 
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/games/#{1}").
