@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/:game_id/', to: 'gameplay#show', as: :gameplay
   namespace :users do
     get '/:id/dashboard', to: 'dashboard#show', as: 'dashboard'
-    get '/:id/quests', to: 'quests#create', as: 'new_quest'
+    post '/:id/quests', to: 'quests#create', as: 'new_quest'
     post '/:id/games', to: 'games#create', as: 'new_game'
   end
   devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
