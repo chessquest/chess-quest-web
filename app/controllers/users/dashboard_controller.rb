@@ -7,7 +7,6 @@ class Users::DashboardController < ApplicationController
     end
     
     data = JSON.parse(response.body, symbolize_names: true)
-    require 'pry'; binding.pry
     return @quests = nil if data[:data].blank?
 
     data = data[:data]
