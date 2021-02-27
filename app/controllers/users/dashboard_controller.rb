@@ -6,10 +6,15 @@ class Users::DashboardController < ApplicationController
       req.params[:status] = 'in_progress'
     end
 
-    return @current_quest = nil if response.body.blank?
+    return @quests = nil if response.body.blank?
 
     data = JSON.parse(response.body, symbolize_names: true)
-    @current_quest = Quest.new(data)
+
+    data = data[:data]
+
+    @quests = data.map do |datum|
+      Quest.new(datum)
+    end
 
     @current_game = nil
   end
