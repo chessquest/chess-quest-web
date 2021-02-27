@@ -581,7 +581,7 @@
           1,
           null,
           1,
-          1,
+          0,
           null,
           null,
           null,
@@ -602,92 +602,7 @@
           null
         ]
       },
-      "/Users/magicmax/turing/mod3/consultancy/chess-quest-web/app/controllers/welcome_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/magicmax/turing/mod3/consultancy/chess-quest-web/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/magicmax/turing/mod3/consultancy/chess-quest-web/app/controllers/omniauth_callbacks_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null
-        ]
-      },
-      "/Users/magicmax/turing/mod3/consultancy/chess-quest-web/app/controllers/users/dashboard_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/magicmax/turing/mod3/consultancy/chess-quest-web/app/poros/quest.rb": {
+      "/Users/magicmax/turing/mod3/consultancy/chess-quest-web/app/poros/game.rb": {
         "lines": [
           1,
           1,
@@ -697,28 +612,11 @@
           1,
           1,
           1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/magicmax/turing/mod3/consultancy/chess-quest-web/app/controllers/users/games_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          0,
           null,
           null
         ]
       }
     },
-    "timestamp": 1614454713
+    "timestamp": 1614457621
   }
 }
