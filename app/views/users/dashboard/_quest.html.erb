@@ -1,7 +1,6 @@
 <section class="current-quest">
   <%= quest.name %>
   <% if current_game.nil? %>
-    <%= button_to 'Start Game' %>
-    <%# button_to 'Start Game', users_gameplay_path(current_user) %>
+    <%= button_to 'Start Game', users_new_game_path, method: :post %>
   <% end %>
 </section>
