@@ -50,12 +50,4 @@ var config = {
   pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
 }
 
-var game_config = {
-  draggable: true,
-  position: @game.fen,
-  onDragStart: onDragStart,
-  onDrop: onDrop,
-  onSnapEnd: onSnapEnd,
-  pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
-}
 // board = Chessboard('myBoard', config)

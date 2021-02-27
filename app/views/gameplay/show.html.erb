@@ -2,6 +2,14 @@ Good luck
 <div class="d-flex justify-content-center pt-5">
   <div id="myBoard" style="width: 800px"></div>
   <script>
-    board = Chessboard('myBoard', game_config)
+  var game_config = {
+    draggable: true,
+    position: <%= @game.fen%>,
+    onDragStart: onDragStart,
+    onDrop: onDrop,
+    onSnapEnd: onSnapEnd,
+    pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
+  }
+  board = Chessboard('myBoard', game_config)
   </script>
 </div>
