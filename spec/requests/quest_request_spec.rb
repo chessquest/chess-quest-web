@@ -19,9 +19,9 @@ RSpec.describe 'Quest Request' do
         # expect(response.status).to eq(201)
         
         expect(parsed_response).to be_a Hash
-        expect(parsed_response[:data][:attributes][:status]).to eq('in_progress')
-        expect(parsed_response[:data][:attributes][:user_id]).to eq('12')
-        expect(parsed_response[:data][:attributes][:name]).to eq('Orcs on the Run')
+        expect(parsed_response[:data].first[:attributes][:status]).to eq('in_progress')
+        expect(parsed_response[:data].first[:attributes][:user_id]).to eq('12')
+        expect(parsed_response[:data].first[:attributes][:name]).to eq('Orcs on the Run')
       end
     end
   end
