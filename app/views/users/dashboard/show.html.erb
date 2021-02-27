@@ -2,7 +2,7 @@
 <h2>Welcome to Chess Quest, <%= current_user.email %>!</h2>
 
   <% if @quests.nil? %>
-    <%= button_to 'Start Quest', users_new_quest_path(current_user), method: :get %>
+    <%= button_to 'Start Quest', users_new_quest_path, method: :post %>
   <% else %>
     <%= render partial: 'quest', collection: @quests, locals: {current_game: @current_game} || 'No active Quests'%>
   <% end %>
