@@ -6,7 +6,7 @@ class Users::GamesController < ApplicationController
     end
 
     data = JSON.parse(response.body, symbolize_names: true)
-    binding.pry
-    redirect_to gameplay_path()
+
+    redirect_to gameplay_path(data[:data][:id])
   end
 end

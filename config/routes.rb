@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
-  # get '/:game_id/', to: 'gameplay#show', as: :gameplay, path: :play
+  get '/:game_id/', to: 'gameplay#show', as: :gameplay
   namespace :users do
     get '/:id/dashboard', to: 'dashboard#show', as: 'dashboard'
     get '/:id/quests', to: 'quests#create', as: 'new_quest'
