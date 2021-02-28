@@ -1,5 +1,6 @@
 var board = null
-var game = new Chess()
+// game is declared in the gameplay show script
+// var game = new Chess()
 
 function onDragStart (source, piece, position, orientation) {
   // do not pick up pieces if the game is over

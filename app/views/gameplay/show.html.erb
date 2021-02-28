@@ -2,6 +2,7 @@ Good luck
 <div class="d-flex justify-content-center pt-5">
   <div id="myBoard" style="width: 800px"></div>
   <script>
+  var game = new Chess("<%= @game.fen %>")
   var game_config = {
     draggable: true,
     position: "<%= @game.fen %>",
@@ -10,8 +11,6 @@ Good luck
     onSnapEnd: onSnapEnd,
     pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
   }
-  </script>
-  <script>
   board = Chessboard('myBoard', game_config)
   </script>
 </div>
