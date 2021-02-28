@@ -68,7 +68,7 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       stub_request(:post, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/games?find_player=magnuscarlsen").
         to_return(status: 200, body: json_response)
 
-      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/1").
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/games/1").
         to_return(status: 200, body: json_response)
 
       click_button 'Start Game'
