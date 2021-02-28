@@ -4,12 +4,14 @@ Good luck
   <script>
   var game_config = {
     draggable: true,
-    position: <%= @game.fen %>,
+    position: "<%= @game.fen %>",
     onDragStart: onDragStart,
     onDrop: onDrop,
     onSnapEnd: onSnapEnd,
     pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
   }
+  </script>
+  <script>
   board = Chessboard('myBoard', game_config)
   </script>
 </div>
