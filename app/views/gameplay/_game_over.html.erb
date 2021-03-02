@@ -7,6 +7,20 @@
   } else {
     var text = ("You Won!!")
   }
-  alert(text);
+  if (game.game_over()) {
+    alert(text);
+  }
 </script>
-<%= button_to "Dashboard", dashboard_path %>
+<script>
+  function winner () {
+    if (game.in_checkmate() && game.turn() === "b") {
+      return 1
+    } else if (game.in_checkmate() || game.in_stalemate()) {
+      return 2
+    } else {
+      return 0
+    }
+  }
+</script>
+
+<%= button_to "Dashboard", dashboard_path, method: :get %>
