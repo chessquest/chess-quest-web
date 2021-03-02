@@ -1,4 +1,4 @@
-class Users::QuestsController < ApplicationController
+class QuestsController < ApplicationController
 
   def create
     conn = Faraday.new(url: "https://chess-quest-api.herokuapp.com/api/v1/users/#{current_user.id}/")
@@ -6,7 +6,7 @@ class Users::QuestsController < ApplicationController
 
     data = JSON.parse(response.body, symbolize_names: true)
 
-    redirect_to users_dashboard_path(current_user)
+    redirect_to dashboard_path
   end
 
 end
