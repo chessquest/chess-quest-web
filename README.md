@@ -76,13 +76,13 @@ This project is deployed on [Heroku here](https://chess-quest.herokuapp.com)
 <!-- CONTRIBUTORS -->
 ## Contributors
 
-Adam Etzion || [LinkedIn](https://www.linkedin.com/in/adametzion/)
-Ely Hess || [LinkedIn](https://www.linkedin.com/in/ely-hess/)
-Grayson Myers || [LinkedIn](https://www.linkedin.com/in/grayson-myers-285926165/)
-Liam Cusack || [LinkedIn](https://www.linkedin.com/in/liam-cusack-6a9a0a169/)
-Max Ribbans || [LinkedIn](https://www.linkedin.com/in/max-ribbans-46b276156/)
-Mike Foy || [LinkedIn](https://www.linkedin.com/in/michael-foy-707ba7b4/)
-Phil McCarthy || [LinkedIn](https://www.linkedin/in/pjmcc)
+Adam Etzion [GitHub](https://github.com/aetzion1) [LinkedIn](https://www.linkedin.com/in/adametzion/)
+Ely Hess [GitHub](https://github.com/elyhess) [LinkedIn](https://www.linkedin.com/in/ely-hess/)
+Grayson Myers [GitHub](https://github.com/graymyers) [LinkedIn](https://www.linkedin.com/in/grayson-myers-285926165/)
+Liam Cusack [GitHub](https://github.com/liamcusack) [LinkedIn](https://www.linkedin.com/in/liam-cusack-6a9a0a169/)
+Max Ribbans [GitHub](https://github.com/ribbansmax) [LinkedIn](https://www.linkedin.com/in/max-ribbans-46b276156/)
+Mike Foy [GitHub](https://github.com/foymikek) [LinkedIn](https://www.linkedin.com/in/michael-foy-707ba7b4/)
+Phil McCarthy [GitHub](https://github.com/philmccarthy) [LinkedIn](https://www.linkedin/in/pjmcc)
 
 <!-- SYSTEM DESIGN -->
 ## System Design
@@ -100,27 +100,25 @@ Phil McCarthy || [LinkedIn](https://www.linkedin/in/pjmcc)
 
 - Rails 5.2.4.3
 
-### Getting Started
-
-If you don't have yarn installed locally, you can use Homebrew:
-`brew install yarn`
-
-Next, run `yarn` to install the chessboard.js and chess.js libraries.
-
-Regular Rails setup... clone, bundle, rake db:{create,migrate}
-
-Run `rake assets:precompile` to compile the chess-related assets to allow them to be compiled and cached up front rather than compiled every time the app boots.
-
 <!-- CONTRIBUTING -->
-## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Feel free to improve upon the codebase and submit pull requests! We hope that users provide input to improve their experience and that of others.
+### Contributing
 
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. We hope that users provide input to improve their experience and that of others.
+
+###### Getting Started
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. If you don't have yarn installed locally, you can use Homebrew:
+`brew install yarn`
+3. Run `yarn` to install the chessboard.js and chess.js libraries.
+4. Set up the rails database `rails db:{create,migrate}
+5. Run `rake assets:precompile` to compile the chess-related assets 
+    * *This allows these assets to be compiled and cached up front rather than compiled every time the app boots*
+###### Making a Contribution
+1. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+2. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+3. Push to the Branch (`git push origin feature/AmazingFeature`)
+4. Open a Pull Request
 
 The Chess.js and Chessboard.js documentation can be referenced for additional [chessboard methods](https://github.com/jhlywa/chess.js/) and [examples of implementation](https://chessboardjs.com/docs), respectively
 
