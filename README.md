@@ -17,11 +17,11 @@
     Thunderdome meets Hearthstone Arena meets Chess...it's CHESS QUEST! Online chess, except you play your next game with just the pieces you last won with. How far will your quest take you?
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <!-- <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a> -->
+    <!-- · -->
+    <a href="https://github.com/chessquest/chessquest-web/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/chessquest/chessquest-web/issues">Request Feature</a>
   </p>
 </p>
 
@@ -31,21 +31,13 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#user-interface">User Interface</a></li>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#gettting-started">Contributing</a>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#user-interface">User Interface</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
@@ -74,7 +66,7 @@ This project is deployed on [Heroku here](https://chess-quest.herokuapp.com)
 * [OAuth](https://oauth.net/) - *Google OAuth was chosen for the Chess Quest MVP as a means to keep the barriers to entry low (google is quite common)*
 
 <!-- CONTRIBUTORS -->
-## Contributors
+### Contributors
 
 Adam Etzion [GitHub](https://github.com/aetzion1) [LinkedIn](https://www.linkedin.com/in/adametzion/)
 Ely Hess [GitHub](https://github.com/elyhess) [LinkedIn](https://www.linkedin.com/in/ely-hess/)
@@ -84,8 +76,14 @@ Max Ribbans [GitHub](https://github.com/ribbansmax) [LinkedIn](https://www.linke
 Mike Foy [GitHub](https://github.com/foymikek) [LinkedIn](https://www.linkedin.com/in/michael-foy-707ba7b4/)
 Phil McCarthy [GitHub](https://github.com/philmccarthy) [LinkedIn](https://www.linkedin/in/pjmcc)
 
+## Roadmap
+
+The team utilized a [github project board](https://github.com/orgs/chessquest/projects/1) to organize project issues and cooridnate workflow across 7 members and 3 repositories.
+
+See the [open issues](https://github.com/chessquest/chess-quest-web/issues) for a list of proposed features (and known issues).
+
 <!-- SYSTEM DESIGN -->
-## System Design
+### System Design
 
 ###### Basic Web Architecture 
 ![Architecture](app/assets/images/architecture.jpg)
@@ -93,20 +91,17 @@ Phil McCarthy [GitHub](https://github.com/philmccarthy) [LinkedIn](https://www.l
 ###### Initial Wireframes
 ![Wireframes](app/assets/images/wireframes.png)
 
-<!-- GETTING STARTED -->
-### Versions
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. We hope that users provide input to improve their experience and that of others.
+
+###### Versions
 
 - Ruby 2.5.3
 
 - Rails 5.2.4.3
-
-<!-- CONTRIBUTING -->
-
-### Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. We hope that users provide input to improve their experience and that of others.
-
-###### Getting Started
+###### Initial Setup
 1. Fork the Project
 2. If you don't have yarn installed locally, you can use Homebrew:
 `brew install yarn`
@@ -114,6 +109,7 @@ Contributions are what make the open source community such an amazing place to b
 4. Set up the rails database `rails db:{create,migrate}
 5. Run `rake assets:precompile` to compile the chess-related assets 
     * *This allows these assets to be compiled and cached up front rather than compiled every time the app boots*
+
 ###### Making a Contribution
 1. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 2. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
@@ -122,12 +118,7 @@ Contributions are what make the open source community such an amazing place to b
 
 The Chess.js and Chessboard.js documentation can be referenced for additional [chessboard methods](https://github.com/jhlywa/chess.js/) and [examples of implementation](https://chessboardjs.com/docs), respectively
 
-<!-- ROADMAP -->
-## Roadmap
-
-The team utilized a [github project board](https://github.com/orgs/chessquest/projects/1) to organize project issues and cooridnate workflow across 7 members and 3 repositories.
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+<!-- USER INTERFACE -->
 
 ## User Interface
 
