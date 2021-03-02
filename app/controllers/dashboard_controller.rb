@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-  def show
+  def index
     conn = Faraday.new(url: "https://chess-quest-api.herokuapp.com/api/v1/users/#{current_user.id}/")
 
     response = conn.get('quests') do |req|

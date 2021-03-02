@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
 
-  get '/dashboard', to: 'dashboard#show', as: 'dashboard'
+  get '/dashboard', to: 'dashboard#index', as: 'dashboard'
   post '/quests', to: 'quests#create', as: 'new_quest'
   post '/games', to: 'games#create', as: 'new_game'
 
