@@ -12,6 +12,11 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       json_response = File.read("./spec/fixtures/no_quests.json")
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=in_progress").
         to_return(status: 200, body: json_response)
+
+      json_response = File.read("./spec/fixtures/completed_quests.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=completed").
+        to_return(status: 200, body: json_response)
+
       visit root_path
 
       click_link 'Sign In With Google'
@@ -26,6 +31,10 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
         to_return(status: 200, body: json_response)
       visit root_path
 
+      json_response = File.read("./spec/fixtures/completed_quests.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=completed").
+        to_return(status: 200, body: json_response)
+
       click_link 'Sign In With Google'
 
       expect(current_path).to eq(dashboard_path)
@@ -39,6 +48,10 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=in_progress").
         to_return(status: 200, body: json_response)
       visit root_path
+
+      json_response = File.read("./spec/fixtures/no_quests.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=completed").
+        to_return(status: 200, body: json_response)
 
       click_link 'Sign In With Google'
 
@@ -61,6 +74,10 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=in_progress").
         to_return(status: 200, body: json_response)
       visit root_path
+
+      json_response = File.read("./spec/fixtures/completed_quests.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=completed").
+        to_return(status: 200, body: json_response)
 
       click_link 'Sign In With Google'
 
