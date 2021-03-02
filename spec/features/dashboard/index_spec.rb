@@ -5,13 +5,17 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
     before :each do
       stub_omniauth
       @user = User.create(email: 'john@example.com', uid: '100000000000000000000')
-      # login_as(@user)
     end
 
     it 'displays button to create new quest if no quest is ongoing' do
       json_response = File.read("./spec/fixtures/no_quests.json")
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=in_progress").
         to_return(status: 200, body: json_response)
+
+      json_response = File.read("./spec/fixtures/completed_quests.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=completed").
+        to_return(status: 200, body: json_response)
+
       visit root_path
 
       click_link 'Sign In With Google'
@@ -26,6 +30,10 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
         to_return(status: 200, body: json_response)
       visit root_path
 
+      json_response = File.read("./spec/fixtures/completed_quests.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=completed").
+        to_return(status: 200, body: json_response)
+
       click_link 'Sign In With Google'
 
       expect(current_path).to eq(dashboard_path)
@@ -39,6 +47,10 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=in_progress").
         to_return(status: 200, body: json_response)
       visit root_path
+
+      json_response = File.read("./spec/fixtures/no_quests.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=completed").
+        to_return(status: 200, body: json_response)
 
       click_link 'Sign In With Google'
 
@@ -62,6 +74,10 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
         to_return(status: 200, body: json_response)
       visit root_path
 
+      json_response = File.read("./spec/fixtures/completed_quests.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=completed").
+        to_return(status: 200, body: json_response)
+
       click_link 'Sign In With Google'
 
       json_response = File.read("./spec/fixtures/game.json")
@@ -74,7 +90,9 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
 
       click_button 'Start Game'
 
-      # expect(current_path).to eq(gameplay_path(current_game)
+      expect(page).to have_css('#myBoard')
+      expect(page).to have_content("Good Luck!")
+      expect(current_path.match?(/\/\d+/)).to eq(true)
     end
   end
 end
