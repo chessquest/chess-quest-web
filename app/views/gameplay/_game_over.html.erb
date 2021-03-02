@@ -1,0 +1,12 @@
+<script>
+  var color = game.turn()
+  if (color === "w") {
+    var text = ("Your quest ends here")
+  } else if (color.in_stalemate()) {
+    var text = ("Your quest ends here")
+  } else {
+    var text = ("You Won!!")
+  }
+  alert(text);
+</script>
+<%= button_to "Dashboard", dashboard_path %>

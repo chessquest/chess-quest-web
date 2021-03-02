@@ -12,5 +12,8 @@
     pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
   }
   board = Chessboard('myBoard', game_config)
+  if (game.game_over()) {
+    <%= render "game_over" %>
+  }
   </script>
 </div>
