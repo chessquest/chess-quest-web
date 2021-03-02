@@ -10,22 +10,22 @@ describe 'Welcome Index', type: :feature do
   end
 
   it 'logs the user in via google mock' do
-    
+
     user_count = User.count
     expect(user_count).to eq(0)
-    
+
     stub_omniauth
     user_count = User.count
     expect(user_count).to eq(0)
-    
+
     visit root_path
     json_response = File.read("./spec/fixtures/no_quests.json")
     uri_template = Addressable::Template.new("https://chess-quest-api.herokuapp.com/api/v1/users/{id}/quests?status=in_progress")
     stub_request(:get, uri_template).
-    to_return(status: 200, body: json_response)
-    
+      to_return(status: 200, body: json_response)
+
     click_link 'Sign In With Google'
-    
+
     user_count = User.count
     expect(user_count).to eq(1)
     user = User.first

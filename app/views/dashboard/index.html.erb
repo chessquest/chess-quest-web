@@ -4,7 +4,7 @@
   <% if !@current_quest %>
     <%= button_to 'Start Quest', new_quest_path, method: :post %>
   <% else %>
-    <%= render 'quest' %>
+    <%= render partial: 'quest', collection: @current_quest, locals: {current_game: @current_game} %>
   <% end %>
 
   <% if @completed_quests %>

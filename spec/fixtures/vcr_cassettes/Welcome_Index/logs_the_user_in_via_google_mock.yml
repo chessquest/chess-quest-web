@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://chess-quest-api.herokuapp.com/api/v1/users/278/quests?status=in_progress
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 02 Mar 2021 03:59:10 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"42f8104a18754db6b114ef6672fc4f0e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 32e1f81a-cfbf-4a30-b3a8-9c7ee87b72b3
+      X-Runtime:
+      - '0.005261'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[],"included":[]}'
+  recorded_at: Tue, 02 Mar 2021 03:59:11 GMT
+- request:
+    method: get
+    uri: https://chess-quest-api.herokuapp.com/api/v1/users/278/quests?status=completed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 02 Mar 2021 03:59:11 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"42f8104a18754db6b114ef6672fc4f0e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ee8f77a6-1c30-4510-afb7-8f2a5a7c4ad6
+      X-Runtime:
+      - '0.005689'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[],"included":[]}'
+  recorded_at: Tue, 02 Mar 2021 03:59:11 GMT
+recorded_with: VCR 6.0.0
