@@ -1,16 +1,54 @@
 <h3 class="text-center">Good Luck!</h3>
 <div class="d-flex justify-content-center pt-5">
   <div id="myBoard" style="width: 800px"></div>
+  <%= render "game_over" %>
   <script>
-  var game = new Chess("<%= @game.fen %>")
-  var game_config = {
-    draggable: true,
-    position: "<%= @game.fen %>",
-    onDragStart: onDragStart,
-    onDrop: onDrop,
-    onSnapEnd: onSnapEnd,
-    pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
-  }
-  board = Chessboard('myBoard', game_config)
+    function onSnapEndOurs () {
+      board.position(game.fen())
+      var options = {
+        method: "PATCH",
+        headers: {"Content-Type": "application/json"},
+        // body: JSON.stringify({ status: winner(), current_fen: game.fen() }),
+        mode: "cors"
+      }
+      fetch(
+        `https://chess-quest-api.herokuapp.com/api/v1/users/<%= current_user.id %>/quests/<%= @game.quest_id %>/games/<%= @game.id %>?status=${winner()}&current_fen=${game.fen()}`,
+        options
+      );
+    }
+    function onDropOurs (source, target) {
+      // see if the move is legal
+      var move = game.move({
+        from: source,
+        to: target,
+        promotion: 'q' // NOTE: always promote to a queen for example simplicity
+      })
+
+      // illegal move
+      if (move === null) return 'snapback'
+
+      // make random legal move for black
+      window.setTimeout(makeRandomMove, 250)
+      var options = {
+        method: "PATCH",
+        headers: {"Content-Type": "application/json"},
+        // body: JSON.stringify({ status: winner(), current_fen: game.fen() }),
+        mode: "cors"
+      }
+      fetch(
+        `https://chess-quest-api.herokuapp.com/api/v1/users/<%= current_user.id %>/quests/<%= @game.quest_id %>/games/<%= @game.id %>?status=${winner()}&current_fen=${game.fen()}`,
+        options
+      );
+    }
+    var game = new Chess("<%= @game.fen %>")
+    var game_config = {
+      draggable: true,
+      position: "<%= @game.fen %>",
+      onDragStart: onDragStart,
+      onDrop: onDropOurs,
+      onSnapEnd: onSnapEndOurs,
+      pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
+    }
+    board = Chessboard('myBoard', game_config)
   </script>
 </div>
