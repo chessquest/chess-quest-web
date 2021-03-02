@@ -39,6 +39,7 @@ gem 'devise'
 gem 'omniauth', '~> 1.9'
 gem 'omniauth-google-oauth2'
 gem 'bootstrap', '~> 4.5'
+gem 'vcr'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
