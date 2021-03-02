@@ -111,10 +111,16 @@ Regular Rails setup... clone, bundle, rake db:{create,migrate}
 
 Run `rake assets:precompile` to compile the chess-related assets to allow them to be compiled and cached up front rather than compiled every time the app boots.
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- CONTRIBUTING -->
+## Contributing
 
-Feel free to improve upon the codebase and submit pull requests! We hope that users provide input to improve their experience and that of others.
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Feel free to improve upon the codebase and submit pull requests! We hope that users provide input to improve their experience and that of others.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 The Chess.js and Chessboard.js documentation can be referenced for additional [chessboard methods](https://github.com/jhlywa/chess.js/) and [examples of implementation](https://chessboardjs.com/docs), respectively
 
@@ -150,12 +156,26 @@ After authenticating, we allow users to:
 
 ![Gameplay](app/assets/images/gameplay1.png)
 
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+## Contact
+
+Project Link: [https://github.com/chessquest/chess-quest-web](https://github.com/chessquest/chess-quest-web)
+
+See the [open issues](https://github.com/chessquest/chess-quest-web/issues) for a list of proposed features (and known issues).
+
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [chessboard.js](https://chessboardjs.com/)
 * [chess.js](https://github.com/jhlywa/chess.js)
 * [Img Shields](https://shields.io)
 * [Font Awesome](https://fontawesome.com)
+* [MIT Open Source License](https://opensource.org/licenses/MIT)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
