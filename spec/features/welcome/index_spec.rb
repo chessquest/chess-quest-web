@@ -49,7 +49,7 @@ describe 'Welcome Index', type: :feature do
     user_count = User.count
     expect(user_count).to eq(1)
 
-    expect(current_path).to eq(users_dashboard_path(user))
+    expect(current_path).to eq(dashboard_path)
     expect(page).to have_content("Welcome to Chess Quest, #{user.email}")
   end
 end

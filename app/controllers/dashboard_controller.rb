@@ -1,4 +1,4 @@
-class Users::DashboardController < ApplicationController
+class DashboardController < ApplicationController
   def show
     conn = Faraday.new(url: "https://chess-quest-api.herokuapp.com/api/v1/users/#{current_user.id}/")
 

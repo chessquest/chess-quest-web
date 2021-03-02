@@ -5,6 +5,7 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
     before :each do
       stub_omniauth
       @user = User.create(email: 'john@example.com', uid: '100000000000000000000')
+      # login_as(@user)
     end
 
     it 'displays button to create new quest if no quest is ongoing' do
@@ -27,7 +28,7 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
 
       click_link 'Sign In With Google'
 
-      expect(current_path).to eq(users_dashboard_path(@user))
+      expect(current_path).to eq(dashboard_path)
       expect(page).to_not have_button('Start Quest')
       expect(page).to have_css('.current-quest')
       expect(page).to have_button('Start Game')
@@ -49,7 +50,7 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       
       click_button 'Start Quest'
 
-      expect(current_path).to eq(users_dashboard_path(@user))
+      expect(current_path).to eq(dashboard_path)
       expect(page).to_not have_button('Start Quest')
       expect(page).to have_css('.current-quest')
       expect(page).to have_button('Start Game')
