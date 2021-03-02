@@ -23,6 +23,5 @@ class QuestsFacade
 				Quest.new(datum)
 			end
 		end
-
 	end
 end
