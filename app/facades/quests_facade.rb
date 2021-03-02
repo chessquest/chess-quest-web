@@ -15,6 +15,10 @@ class QuestsFacade
 			end
 		end
 
+		def get_current_win_streak(user)
+			QuestService.call_current_win_streak(user)
+		end
+
 
 		private
 

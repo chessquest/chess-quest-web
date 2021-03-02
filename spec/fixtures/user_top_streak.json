@@ -1,0 +1,1 @@
+"{\"data\":{\"id\":null,\"type\":\"user_stat\",\"attributes\":{\"streak\":5,\"quest_id\":62},\"relationships\":{\"games\":{\"data\":[{\"id\":\"131\",\"type\":\"game\"},{\"id\":\"132\",\"type\":\"game\"},{\"id\":\"133\",\"type\":\"game\"},{\"id\":\"134\",\"type\":\"game\"},{\"id\":\"135\",\"type\":\"game\"},{\"id\":\"136\",\"type\":\"game\"}]}}}}"

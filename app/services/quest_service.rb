@@ -16,6 +16,11 @@ class QuestService
 			parse(quest_data)
 		end
 
+		def call_current_win_streak(user)
+			data = conn(user).get('win_streak')
+			parse(data)[:data][:attributes][:streak]
+		end
+
 		private
 
 		def conn(user)
