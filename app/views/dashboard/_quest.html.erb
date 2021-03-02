@@ -1,0 +1,6 @@
+<section class="current-quest">
+  <%= quest.name %>
+  <% if current_game.nil? %>
+    <%= render "game_selection" %>
+  <% end %>
+</section>

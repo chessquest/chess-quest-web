@@ -4,9 +4,7 @@
   <% if !@current_quest %>
     <%= button_to 'Start Quest', new_quest_path, method: :post %>
   <% else %>
-    <% if @current_game.nil? %>
-      <%= button_to 'Start Game', new_game_path, method: :post %>
-    <% end %>
+    <%= render 'quest' %>
   <% end %>
 
   <% if @completed_quests %>
