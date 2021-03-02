@@ -1,18 +1,20 @@
 <!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/chessquest/chess-quest-web">
+    <img src="app/assets/images/pngwing.com.png" alt="Chess Quest Logo" width="80" height="80">
   </a>
 
   <h3 align="center">CHESS QUEST</h3>
 
   <p align="center">
     Thunderdome meets Hearthstone Arena meets Chess...it's CHESS QUEST! Online chess, except you play your next game with just the pieces you last won with. How far will your quest take you?
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
@@ -30,6 +32,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#user-interface">User Interface</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -49,8 +52,6 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
@@ -58,43 +59,48 @@
 
 Welcome to Chess Quest! This repository contains our frontend Rails app. This app makes calls to the [backend Rails API](https://github.com/chessquest/chess-quest), which makes use of a [Sinatra microservice](https://github.com/chessquest/chess-api) to retrieve data from the Chess.com API.
 
-### User Interface
-
-Placeholder for screenshots/videos/gifs of the user interface.
-
-![Wireframes](wireframes.png)
+This project is deployed on [Heroku here](https://chess-quest.herokuapp.com)
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [Ruby on Rails](https://rubyonrails.org/)
 * [Sinatra](http://sinatrarb.com/)
-* [chessboard.js](https://chessboardjs.com/)
-* [chess.js](https://github.com/jhlywa/chess.js)
-* [OAuth](https://oauth.net/)
 * [PostgreSQL](https://www.postgresql.org/)
+* [Bootstrap](https://getbootstrap.com/)
+* [JQuery](https://jquery.com/)
+* [RSpec](https://github.com/rspec/rspec-rails)
+* [Travis CI](https://travis-ci.com/)
+* [JavaScript](https://www.javascript.com)
+* [OAuth](https://oauth.net/) - *Google OAuth was chosen for the Chess Quest MVP as a means to keep the barriers to entry low (google is quite common)*
 
-### OAuth Usage
+<!-- CONTRIBUTORS -->
+## Contributors
 
-W.I.P. - discussion on our Google Oauth usage. Why we used it.
+Adam Etzion || [LinkedIn](https://www.linkedin.com/in/adametzion/)
+Ely Hess || [LinkedIn](https://www.linkedin.com/in/ely-hess/)
+Grayson Myers || [LinkedIn](https://www.linkedin.com/in/grayson-myers-285926165/)
+Liam Cusack || [LinkedIn](https://www.linkedin.com/in/liam-cusack-6a9a0a169/)
+Max Ribbans || [LinkedIn](https://www.linkedin.com/in/max-ribbans-46b276156/)
+Mike Foy || [LinkedIn](https://www.linkedin.com/in/michael-foy-707ba7b4/)
+Phil McCarthy || [LinkedIn](https://www.linkedin/in/pjmcc)
 
 <!-- SYSTEM DESIGN -->
 ## System Design
 
-W.I.P - Screenshots of system diagram
+###### Basic Web Architecture 
+![Architecture](app/assets/images/architecture.jpg)
+
+###### Initial Wireframes
+![Wireframes](app/assets/images/wireframes.png)
 
 <!-- GETTING STARTED -->
-## Getting Started
+### Versions
 
-W.I.P. - Brief summary of how to get up and running!
+- Ruby 2.5.3
 
-### Prerequisites
+- Rails 5.2.4.3
 
-W.I.P. - Versions, dependencies, etc.
-
-### Installation
-
-W.I.P. - Steps to install the frontend app.
+### Getting Started
 
 If you don't have yarn installed locally, you can use Homebrew:
 `brew install yarn`
@@ -108,29 +114,41 @@ Run `rake assets:precompile` to compile the chess-related assets to allow them t
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-W.I.P. Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Feel free to improve upon the codebase and submit pull requests! We hope that users provide input to improve their experience and that of others.
 
-Chess.js documentation for chessboard methods can be found in the readme [here!](https://github.com/jhlywa/chess.js/)
-
-Chessboardjs documentation with examples of implementation with chess.js can be found [here!](https://chessboardjs.com/docs)
+The Chess.js and Chessboard.js documentation can be referenced for additional [chessboard methods](https://github.com/jhlywa/chess.js/) and [examples of implementation](https://chessboardjs.com/docs), respectively
 
 <!-- ROADMAP -->
 ## Roadmap
 
+The team utilized a [github project board](https://github.com/orgs/chessquest/projects/1) to organize project issues and cooridnate workflow across 7 members and 3 repositories.
+
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
 
-W.I.P. - extension features
+## User Interface
 
-<!-- CONTACT -->
-## Contact
+This application allows a visitor to play a practice chess game or log-in via Google OAuth to start a quest.
 
-Adam Etzion || [LinkedIn](https://www.linkedin.com/in/adametzion/)
-Ely Hess || [LinkedIn](https://www.linkedin.com/in/ely-hess/)
-Grayson Myers || [LinkedIn](https://www.linkedin.com/in/grayson-myers-285926165/)
-Liam Cusack || [LinkedIn](https://www.linkedin.com/in/liam-cusack-6a9a0a169/)
-Max Ribbans || [LinkedIn](https://www.linkedin.com/in/max-ribbans-46b276156/)
-Mike Foy || [LinkedIn](https://www.linkedin.com/in/michael-foy-707ba7b4/)
-Phil McCarthy || [LinkedIn](https://www.linkedin/in/pjmcc)
+![Welcome Page](app/assets/images/welcome_page.png)
+
+After authenticating, we allow users to:
+* Naviagte to the user Dashboard to:
+  * View their curent and complete quests
+  * View their current and past games
+  * View relevant user stats
+* Start a quest via the dashboard if there is not one ongoing
+
+![Quest Creation](app/assets/images/dashboard1.png)
+
+* Start a game via the dashboard if there is not one ongoing
+  * For a quest's first game, users can select (via a dropdown) to start with all their pieces, in "classic mode" or to start using a board from a selection of famous chess players
+
+![Game Creation](app/assets/images/dashboard2.png)
+
+* Within the Gameplay page, users are able to play a game to completion
+  * The Chess Quest MVP allows for PvC only
+
+![Gameplay](app/assets/images/gameplay1.png)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
@@ -141,6 +159,14 @@ Phil McCarthy || [LinkedIn](https://www.linkedin/in/pjmcc)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/chessquest/chess-quest/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/chessquest/chess-quest-web.svg?style=for-the-badge
+[contributors-url]: https://github.com/chessquest/chess-quest-web/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/chessquest/chess-quest-web.svg?style=for-the-badge
+[forks-url]: https://github.com/chessquest/chess-quest/network/members
+[stars-shield]: https://img.shields.io/github/stars/chessquest/chess-quest-web.svg?style=for-the-badge
+[stars-url]: https://github.com/chessquest/chess-quest-web/stargazers
+[issues-shield]: https://img.shields.io/github/issues/chessquest/chess-quest-web.svg?style=for-the-badge
+[issues-url]: https://github.com/chessquest/chess-quest-web/issues
+
 <!-- [product-screenshot]: images/screenshot.png -->
+[product-screenshot]: images/screenshot.png

@@ -1,0 +1,263 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://chess-quest-api.herokuapp.com/api/v1/users/186/quests?status=in_progress
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 02 Mar 2021 17:40:40 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"42f8104a18754db6b114ef6672fc4f0e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - eba9bcf1-534b-4317-b7ad-38f69fe25e3c
+      X-Runtime:
+      - '0.008258'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[],"included":[]}'
+  recorded_at: Tue, 02 Mar 2021 17:40:41 GMT
+- request:
+    method: get
+    uri: https://chess-quest-api.herokuapp.com/api/v1/users/186/quests?status=in_progress
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 02 Mar 2021 17:40:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"42f8104a18754db6b114ef6672fc4f0e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9d2aa851-4262-4a84-a1e6-2ebd1b027fd7
+      X-Runtime:
+      - '0.016216'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[],"included":[]}'
+  recorded_at: Tue, 02 Mar 2021 17:40:41 GMT
+- request:
+    method: post
+    uri: https://chess-quest-api.herokuapp.com/api/v1/users/186/quests
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 02 Mar 2021 17:40:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"5772da5d61d238fc2be73cf17488026a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 859fd7c7-e7d1-42f3-a01f-646f27c2d904
+      X-Runtime:
+      - '0.047555'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"39","type":"quest","attributes":{"status":"in_progress","user_id":186},"relationships":{"games":{"data":[]}}}}'
+  recorded_at: Tue, 02 Mar 2021 17:40:41 GMT
+- request:
+    method: get
+    uri: https://chess-quest-api.herokuapp.com/api/v1/users/186/quests?status=in_progress
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 02 Mar 2021 17:40:41 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"dfd015fb7612088b8213c187460690c9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2175809b-ef47-470e-af95-4c5f9cd5aa6b
+      X-Runtime:
+      - '0.025902'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"39","type":"quest","attributes":{"status":"in_progress","user_id":186},"relationships":{"games":{"data":[]}}}],"included":[]}'
+  recorded_at: Tue, 02 Mar 2021 17:40:42 GMT
+- request:
+    method: post
+    uri: https://chess-quest-api.herokuapp.com/api/v1/users/186/games?find_player=magnuscarlsen
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 02 Mar 2021 17:40:50 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8b9ca5a0724b210f2308ff254fd1e5c5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5200b3dc-6cbd-4a7e-923b-275bc7741247
+      X-Runtime:
+      - '8.745948'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"54","type":"game","attributes":{"status":"in_progress","starting_fen":"rnbqkbnr/pppppppp/8/8/8/8/PPPPPP2/RN1QK2R
+        w KQkq - 0 1","current_fen":"rnbqkbnr/pppppppp/8/8/8/8/PPPPPP2/RN1QK2R w KQkq
+        - 0 1"}}}'
+  recorded_at: Tue, 02 Mar 2021 17:40:51 GMT
+- request:
+    method: get
+    uri: https://chess-quest-api.herokuapp.com/api/v1/users/186/games/54
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Tue, 02 Mar 2021 17:40:51 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"8b9ca5a0724b210f2308ff254fd1e5c5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 220394af-9f2e-4eab-b661-5a22586f9acb
+      X-Runtime:
+      - '0.011560'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"54","type":"game","attributes":{"status":"in_progress","starting_fen":"rnbqkbnr/pppppppp/8/8/8/8/PPPPPP2/RN1QK2R
+        w KQkq - 0 1","current_fen":"rnbqkbnr/pppppppp/8/8/8/8/PPPPPP2/RN1QK2R w KQkq
+        - 0 1"}}}'
+  recorded_at: Tue, 02 Mar 2021 17:40:51 GMT
+recorded_with: VCR 6.0.0
