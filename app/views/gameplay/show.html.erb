@@ -36,7 +36,7 @@
         mode: "cors"
       }
       fetch(
-        `https://chess-quest-api.herokuapp.com/api/v1/users/<%= current_user.id %>/quests/1/games/<%= @game.id %>?status=${winner()}&current_fen=${game.fen()}`,
+        `https://chess-quest-api.herokuapp.com/api/v1/users/<%= current_user.id %>/quests/<%= @game.quest_id %>/games/<%= @game.id %>?status=${winner()}&current_fen=${game.fen()}`,
         options
       )
       if (game.game_over()) endText()
