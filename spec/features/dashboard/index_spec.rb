@@ -117,11 +117,11 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       visit root_path
        
       click_link 'Sign In With Google'
-        
+
       visit dashboard_path
 
       within '#stats' do
-        expect(page).to have_content("Current Quest Win Streak\n2")
+        expect(page).to have_content("Current Quest Win Streak")
         within '#top-win-streak' do
         expect(page).to have_content("6")
         expect(page).to have_content("4")

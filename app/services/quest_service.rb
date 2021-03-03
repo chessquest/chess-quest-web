@@ -17,7 +17,7 @@ class QuestService
 
 		def call_current_win_streak(user)
 			data = conn(user).get('win_streak')
-			parse(data)[:data][:attributes][:streak]
+			parse(data)[:data][:attributes][:streak] unless data[:data].nil?
 		end
 
 		private
