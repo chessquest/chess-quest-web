@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Dashboard Show Page', type: :feature do
-  describe '' do
+  describe 'as a user' do
     before :each do
       stub_omniauth
       @user = User.create(email: 'john@example.com', uid: '100000000000000000000')
@@ -121,7 +121,7 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       visit dashboard_path
 
       within '#stats' do
-        expect(page).to have_content("My Current Win Streak: 2")
+        expect(page).to have_content("Current Quest Win Streak:\n2")
         within '#top-win-streak' do
         expect(page).to have_content("6")
         expect(page).to have_content("4")

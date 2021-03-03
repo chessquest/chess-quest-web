@@ -1,25 +1,41 @@
-<h1>User Dashboard</h1>
-<h2>Welcome to Chess Quest, <%= current_user.email %>!</h2>
+<div class="jumbotron text-center">
+  <h1>User Dashboard</h1>
+  <p>Welcome to Chess Quest, <%= current_user.email %>!</p>
+</div>
 
-<% if !@current_quest %>
-  <%= button_to 'Start Quest', new_quest_path, method: :post %>
-<% else %>
-  <%= render partial: 'quest', collection: @current_quest, locals: {current_game: @current_game} %>
-<% end %>
+<div class="jumbotron d-flex justify-content-center">
+  <div>
+    <h3>Current Quest</h3>
+    <% if !@current_quest %>
+      <%= button_to 'Start Quest', new_quest_path, method: :post, class: "btn btn-primary" %>
+    <% else %>
+      <div class="pt-3">
+        <%= render partial: 'quest', collection: @current_quest, locals: {current_game: @current_game} %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<% if @completed_quests %>
-  <% @completed_quests.each do |quest| %>
-    <p><%= quest.name %></p>
-    <p>Status: <%= quest.status.capitalize %></p>
+<div class="jumbotron text-center">
+  <h3>Completed Quests</h3>
+  <% if @completed_quests %>
+    <% @completed_quests.each do |quest| %>
+      <p class="lead"><%= quest.name %></p>
+      <p class="lead">Status: <%= quest.status.capitalize %></p>
+    <% end %>
+  <% else %>
+    <%= image_tag('sad-face.png', size: '100x100', class: "m-3 p-3") %>
   <% end %>
-<% end %>
-<section id='stats'>
-<h3> Stats </h3>
-  My Current Win Streak: <b><%= @current_win_streak %></b><br>
-  Top 3 Quest Streaks:<br>
-  <ol id="top-win-streak">
-   <% @top_3_win_streak.reverse.each do |game| %> 
-      <li><b><%= game %></b></li>
-   <% end %>
-   </ol>
-</section>
+</div>
+
+<div class="jumbotron text-center" id="stats">
+  <h3 >Stats</h3>
+  <h4>Current Quest Win Streak:</h4>
+  <p class="lead"><%= @current_win_streak %></p>
+  <h4>Top 3 Quest Win Streaks:</h4>
+  <ol id="top-win-streak" style="display:inline-block">
+    <% @top_3_win_streak.reverse.each do |streak| %>
+      <li><p class="lead"><%= streak %> Games Won</p></li>
+    <% end %>
+  </ol>
+</div>
