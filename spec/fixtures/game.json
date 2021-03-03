@@ -4,8 +4,15 @@
     "type": "game",
     "attributes": {
       "status": "in_progress",
-      "quest_id": "1",
       "current_fen": "rnbqkbnr/pppppppp/8/8/8/8/8/RNBQKBNR w KQkq - 0 1"
+    },
+    "relationships": {
+      "quest": {
+        "data": {
+          "id": "1",
+          "type": "quest"
+        }
+      }
     }
   }
 }
