@@ -5,6 +5,15 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
     before :each do
       stub_omniauth
       @user = User.create(email: 'john@example.com', uid: '100000000000000000000')
+
+        json_response = File.read("./spec/fixtures/top3_game_stat.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/top_quests").
+        to_return(status: 200, body: json_response)
+
+      json_response = File.read("./spec/fixtures/user_top_streak.json")
+      # parsed_response = JSON.parse(json_response)
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/win_streak").
+        to_return(status: 200, body: json_response)
     end
 
     it 'displays button to create new quest if no quest is ongoing' do
@@ -97,16 +106,6 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
 
     it 'I can see my user and game stats' do
       # When I visit my dashboard (/dashboard),
-      # json_response = File.read("./spec/fixtures/top3_game_stat.json")
-      # parsed_response = JSON.parse(json_response)
-      # stub_request(:post, "https://chess-quest.herokuapp.com/api/v1/users/#{@user.id}/").
-      #   to_return(status: 200, body: parsed_response)
-
-      json_response = File.read("./spec/fixtures/user_top_streak.json")
-      parsed_response = JSON.parse(json_response)
-      stub_request(:post, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/win_streak").
-        to_return(status: 200, body: parsed_response)
-
       json_response = File.read("./spec/fixtures/quest.json")
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=in_progress").
         to_return(status: 200, body: json_response)
@@ -120,15 +119,15 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       click_link 'Sign In With Google'
         
       visit dashboard_path
-        
-      within 'stats' do
-        expect(page).to have_content("My Current Win Streak: 5")
-        expect(page).to have_content("ChessQuest Top 3 Streaks: 10 7 5")
+
+      within '#stats' do
+        expect(page).to have_content("My Current Win Streak: 2")
+        within '#top-win-streak' do
+        expect(page).to have_content("6")
+        expect(page).to have_content("4")
+        expect(page).to have_content("2")
+        end
       end
-# I see a section for my stats.
-# In this section,
-# I see a count of my current game win or loss streak,
-# And my lifetime Longest Quest (as number of games won).
     end
   end
 end

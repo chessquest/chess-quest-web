@@ -1,1 +1,152 @@
-"{\"data\":{\"id\":null,\"type\":\"user_stat\",\"attributes\":{\"streak\":5,\"quest_id\":62},\"relationships\":{\"games\":{\"data\":[{\"id\":\"131\",\"type\":\"game\"},{\"id\":\"132\",\"type\":\"game\"},{\"id\":\"133\",\"type\":\"game\"},{\"id\":\"134\",\"type\":\"game\"},{\"id\":\"135\",\"type\":\"game\"},{\"id\":\"136\",\"type\":\"game\"}]}}}}"
+{
+  "data": {
+    "id": 1,
+    "type": "user_stat",
+    "attributes": {
+      "streak": 2,
+      "quest_id": 1
+    },
+    "relationships": {
+      "games": {
+        "data": [
+          {
+            "id": "2",
+            "type": "game"
+          },
+          {
+            "id": "5",
+            "type": "game"
+          },
+          {
+            "id": "6",
+            "type": "game"
+          },
+          {
+            "id": "7",
+            "type": "game"
+          },
+          {
+            "id": "8",
+            "type": "game"
+          },
+          {
+            "id": "9",
+            "type": "game"
+          },
+          {
+            "id": "10",
+            "type": "game"
+          },
+          {
+            "id": "11",
+            "type": "game"
+          },
+          {
+            "id": "12",
+            "type": "game"
+          },
+          {
+            "id": "13",
+            "type": "game"
+          },
+          {
+            "id": "14",
+            "type": "game"
+          },
+          {
+            "id": "15",
+            "type": "game"
+          },
+          {
+            "id": "16",
+            "type": "game"
+          },
+          {
+            "id": "17",
+            "type": "game"
+          },
+          {
+            "id": "19",
+            "type": "game"
+          },
+          {
+            "id": "20",
+            "type": "game"
+          },
+          {
+            "id": "23",
+            "type": "game"
+          },
+          {
+            "id": "24",
+            "type": "game"
+          },
+          {
+            "id": "25",
+            "type": "game"
+          },
+          {
+            "id": "31",
+            "type": "game"
+          },
+          {
+            "id": "38",
+            "type": "game"
+          },
+          {
+            "id": "42",
+            "type": "game"
+          },
+          {
+            "id": "43",
+            "type": "game"
+          },
+          {
+            "id": "44",
+            "type": "game"
+          },
+          {
+            "id": "55",
+            "type": "game"
+          },
+          {
+            "id": "57",
+            "type": "game"
+          },
+          {
+            "id": "78",
+            "type": "game"
+          },
+          {
+            "id": "88",
+            "type": "game"
+          },
+          {
+            "id": "89",
+            "type": "game"
+          },
+          {
+            "id": "90",
+            "type": "game"
+          },
+          {
+            "id": "87",
+            "type": "game"
+          },
+          {
+            "id": "93",
+            "type": "game"
+          },
+          {
+            "id": "94",
+            "type": "game"
+          },
+          {
+            "id": "97",
+            "type": "game"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -19,7 +19,6 @@ class QuestsFacade
 			QuestService.call_current_win_streak(user)
 		end
 
-
 		private
 
 		def create_quests(data)

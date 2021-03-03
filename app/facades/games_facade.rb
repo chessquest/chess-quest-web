@@ -7,6 +7,10 @@ class GamesFacade
     parse(response)
   end
 
+  def self.get_top_3_quest_streak
+		GameService.get_top_3_quest_streak
+	end
+
   private
 
   def self.parse(response)

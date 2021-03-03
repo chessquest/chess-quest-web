@@ -13,3 +13,13 @@
     <p>Status: <%= quest.status.capitalize %></p>
   <% end %>
 <% end %>
+<section id='stats'>
+<h3> Stats </h3>
+  My Current Win Streak: <b><%= @current_win_streak %></b><br>
+  Top 3 Quest Streaks:<br>
+  <ol id="top-win-streak">
+   <% @top_3_win_streak.reverse.each do |game| %> 
+      <li><b><%= game %></b></li>
+   <% end %>
+   </ol>
+</section>
