@@ -1,14 +1,16 @@
 <script>
-  var color = game.turn()
-  if (color === "w") {
-    var text = ("Your quest ends here")
-  } else if (color.in_stalemate()) {
-    var text = ("Your quest ends here")
-  } else {
-    var text = ("You Won!!")
-  }
-  if (game.game_over()) {
-    alert(text);
+  function endText() {
+    var color = game.turn()
+    if (color === "w") {
+      var text = ("Your quest ends here")
+    } else if (game.in_stalemate()) {
+      var text = ("Your quest ends here")
+    } else {
+      var text = ("You Won!!")
+    }
+    if (game.game_over()) {
+      alert(text);
+    }
   }
 </script>
 <script>

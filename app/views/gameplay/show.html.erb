@@ -32,13 +32,14 @@
       var options = {
         method: "PATCH",
         headers: {"Content-Type": "application/json"},
-        // body: JSON.stringify({ status: winner(), current_fen: game.fen() }),
+        body: JSON.stringify({ status: winner(), current_fen: game.fen() }),
         mode: "cors"
       }
       fetch(
         `https://chess-quest-api.herokuapp.com/api/v1/users/<%= current_user.id %>/quests/<%= @game.quest_id %>/games/<%= @game.id %>?status=${winner()}&current_fen=${game.fen()}`,
         options
-      );
+      )
+      if (game.game_over()) endText()
     }
     var game = new Chess("<%= @game.fen %>")
     var game_config = {
