@@ -1,25 +1,38 @@
-<h1>User Dashboard</h1>
-<h2>Welcome to Chess Quest, <%= current_user.email %>!</h2>
+<h1 class="jumbotron d-flex justify-content-center">User Dashboard</h1>
+<p class="d-flex justify-content-center">Welcome to Chess Quest, <%= current_user.email %>!</p>
 
-<% if !@current_quest %>
-  <%= button_to 'Start Quest', new_quest_path, method: :post %>
-<% else %>
-  <%= render partial: 'quest', collection: @current_quest, locals: {current_game: @current_game} %>
-<% end %>
+<div class="container pt-3">
+  <div class="row">
+    <div class="col-sm">
+      <h3 class="text-center">Current Quest</h3>
+      <% if !@current_quest %>
+        <%= button_to 'Start Quest', new_quest_path, method: :post, class: "btn btn-primary" %>
+      <% else %>
+        <div class="pt-3">
+          <%= render partial: 'quest', collection: @current_quest, locals: {current_game: @current_game} %>
+        </div>
+      <% end %>
+    </div>
 
-<% if @completed_quests %>
-  <% @completed_quests.each do |quest| %>
-    <p><%= quest.name %></p>
-    <p>Status: <%= quest.status.capitalize %></p>
-  <% end %>
-<% end %>
-<section id='stats'>
-<h3> Stats </h3>
-  My Current Win Streak: <b><%= @current_win_streak %></b><br>
-  Top 3 Quest Streaks:<br>
-  <ol id="top-win-streak">
-   <% @top_3_win_streak.reverse.each do |game| %> 
-      <li><b><%= game %></b></li>
-   <% end %>
-   </ol>
-</section>
+    <div class="col-sm">
+      <h3 class="text-center">Completed Quests</h3>
+      <% if @completed_quests %>
+        <% @completed_quests.each do |quest| %>
+          <p><%= quest.name %></p>
+          <p>Status: <%= quest.status.capitalize %></p>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="col-sm" id="stats">
+      <h3 class="text-center">Stats</h3>
+        My Current Win Streak: <b><%= @current_win_streak %></b><br>
+        Top 3 Quest Streaks:<br>
+        <ol id="top-win-streak">
+        <% @top_3_win_streak.reverse.each do |game| %> 
+            <li><b><%= game %></b></li>
+        <% end %>
+        </ol>
+    </div>
+  </div>
+</div>

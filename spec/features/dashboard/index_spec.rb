@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Dashboard Show Page', type: :feature do
-  describe '' do
+  describe 'as a user' do
     before :each do
       stub_omniauth
       @user = User.create(email: 'john@example.com', uid: '100000000000000000000')
