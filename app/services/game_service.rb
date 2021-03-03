@@ -4,7 +4,7 @@ class GameService
 
     def get_top_3_quest_streak
       data = conn.get("top_quests")
-      x = parse(data)[:data].map do |data_entry|
+      parse(data)[:data].map do |data_entry|
         data_entry[:attributes][:streak]
       end
     end

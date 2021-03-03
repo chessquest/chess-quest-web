@@ -6,7 +6,7 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       stub_omniauth
       @user = User.create(email: 'john@example.com', uid: '100000000000000000000')
 
-        json_response = File.read("./spec/fixtures/top3_game_stat.json")
+      json_response = File.read("./spec/fixtures/top3_game_stat.json")
       stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/top_quests").
         to_return(status: 200, body: json_response)
 
@@ -121,7 +121,7 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       visit dashboard_path
 
       within '#stats' do
-        expect(page).to have_content("Current Quest Win Streak:\n2")
+        expect(page).to have_content("Current Quest Win Streak\n2")
         within '#top-win-streak' do
         expect(page).to have_content("6")
         expect(page).to have_content("4")

@@ -1,7 +1,6 @@
 class QuestService
 
 	class << self
-
 		def call_current_quest(user)
 			quest_data = conn(user).get('quests') do |req|
 				req.params[:status] = 'in_progress'
@@ -30,6 +29,5 @@ class QuestService
 		def parse(response)
 			JSON.parse(response.body, symbolize_names: true)
 		end
-
 	end
 end
