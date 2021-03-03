@@ -5,16 +5,27 @@
   <script>
     function onSnapEndOurs () {
       board.position(game.fen())
+    }
+    function makeRandomMoveOurs () {
+      var possibleMoves = game.moves()
+
+      // game over
+      if (possibleMoves.length === 0) return
+
+      var randomIdx = Math.floor(Math.random() * possibleMoves.length)
+      game.move(possibleMoves[randomIdx])
+      board.position(game.fen())
       var options = {
         method: "PATCH",
         headers: {"Content-Type": "application/json"},
-        // body: JSON.stringify({ status: winner(), current_fen: game.fen() }),
+        params: { status: winner(), current_fen: game.fen() },
         mode: "cors"
       }
       fetch(
         `https://chess-quest-api.herokuapp.com/api/v1/users/<%= current_user.id %>/quests/<%= @game.quest_id %>/games/<%= @game.id %>?status=${winner()}&current_fen=${game.fen()}`,
         options
-      );
+      )
+      if (game.game_over()) endText()
     }
     function onDropOurs (source, target) {
       // see if the move is legal
@@ -28,7 +39,7 @@
       if (move === null) return 'snapback'
 
       // make random legal move for black
-      window.setTimeout(makeRandomMove, 250)
+      window.setTimeout(makeRandomMoveOurs, 250)
       var options = {
         method: "PATCH",
         headers: {"Content-Type": "application/json"},
