@@ -32,7 +32,7 @@
       var options = {
         method: "PATCH",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({ status: winner(), current_fen: game.fen() }),
+        params: { status: winner(), current_fen: game.fen() },
         mode: "cors"
       }
       fetch(
