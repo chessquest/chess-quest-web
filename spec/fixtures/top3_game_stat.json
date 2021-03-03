@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "id": null,
+      "type": "quest_stat",
+      "attributes": {
+        "user_id": 1,
+        "streak": 2,
+        "quest_id": 1
+      }
+      },
+      {
+      "id": null,
+      "type": "quest_stat",
+      "attributes": {
+        "user_id": 2,
+        "streak": 4,
+        "quest_id": 2
+      }
+    },
+      {
+      "id": null,
+      "type": "quest_stat",
+      "attributes": {
+        "user_id": 3,
+        "streak": 6,
+        "quest_id": 3
+      }
+     }
+
+  ]
+}
