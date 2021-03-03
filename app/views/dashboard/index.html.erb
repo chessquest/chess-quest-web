@@ -4,35 +4,43 @@
 <div class="container pt-3">
   <div class="row">
     <div class="col-sm">
-      <h3 class="text-center">Current Quest</h3>
-      <% if !@current_quest %>
-        <%= button_to 'Start Quest', new_quest_path, method: :post, class: "btn btn-primary" %>
-      <% else %>
-        <div class="pt-3">
-          <%= render partial: 'quest', collection: @current_quest, locals: {current_game: @current_game} %>
-        </div>
-      <% end %>
+      <div class="text-center">
+        <h3>Current Quest</h3>
+        <% if !@current_quest %>
+          <%= button_to 'Start Quest', new_quest_path, method: :post, class: "btn btn-primary" %>
+        <% else %>
+          <div class="pt-3">
+            <%= render partial: 'quest', collection: @current_quest, locals: {current_game: @current_game} %>
+          </div>
+        <% end %>
+      </div>
     </div>
 
     <div class="col-sm">
-      <h3 class="text-center">Completed Quests</h3>
+      <div class="text-center">
+        <h3>Completed Quests</h3>
+        <li>quest name #1 - status</li>
+        <li>quest name #2 - status</li>
+      </div>
       <% if @completed_quests %>
         <% @completed_quests.each do |quest| %>
-          <p><%= quest.name %></p>
-          <p>Status: <%= quest.status.capitalize %></p>
+<!--          <p><%#= quest.name %></p>-->
+<!--          <p>Status: <%#= quest.status.capitalize %></p>-->
         <% end %>
       <% end %>
     </div>
 
     <div class="col-sm" id="stats">
-      <h3 class="text-center">Stats</h3>
-        My Current Win Streak: <b><%= @current_win_streak %></b><br>
-        Top 3 Quest Streaks:<br>
+      <div class="text-center">
+        <h3>Stats</h3>
+        Current Quest Win Streak: <%= @current_win_streak %>
+        Top 3 Quest Streaks:
         <ol id="top-win-streak">
-        <% @top_3_win_streak.reverse.each do |game| %> 
-            <li><b><%= game %></b></li>
-        <% end %>
+          <% @top_3_win_streak.reverse.each do |game| %>
+            <li><%= game %></li>
+          <% end %>
         </ol>
+      </div>
     </div>
   </div>
 </div>
