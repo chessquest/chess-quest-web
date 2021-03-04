@@ -1,12 +1,13 @@
-<h1>Welcome</h1>
 
-<section class='description'>
-<p>Thunderdome meets Hearthstone Arena meets Chess. Welcome to CHESS QUEST! Your journey starts with only the pieces remaining from a game! How far will your quest take you? <%= link_to "Sign in", user_google_oauth2_omniauth_authorize_path, method: :post %> to find out!</p>
+<section class='container description'>
+<h1>Welcome</h1>
+<p class="lead">Thunderdome meets Hearthstone Arena meets Chess. Welcome to CHESS QUEST! Your journey starts with only the pieces remaining from a game! How far will your quest take you? </p></br>
+<p class="text-center"><%= link_to "Sign in", user_google_oauth2_omniauth_authorize_path, method: :post %> to find out!</p>
 </section>
 
 </br>
 <section class="text-center m-3">
-  <button id="startPositionBtn">Practice Board, click to reset!</button>
+  <button class="btn btn-outline-secondary btn-sm" id="startPositionBtn">Practice Board, click to reset!</button>
 </section>
 <div class="d-flex justify-content-center pt-3">
   <div id="myBoard" style="width: 600px" class="img-fluid"></div>
