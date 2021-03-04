@@ -19,6 +19,7 @@
         <h4>Current Quest Win Streak</h4>
         <% if @current_win_streak.present? %>
           <p class="lead"><%= @current_win_streak %></p>
+          <%= render partial: 'boards', locals: {won_games: @won_games}%>
         <% else %>
           <%= render 'sad_face' %>
         <% end %>
