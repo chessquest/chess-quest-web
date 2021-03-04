@@ -21,7 +21,7 @@
           <p class="lead"><%= @current_win_streak %></p>
           <%= render partial: 'boards', locals: {won_games: @won_games}%>
         <% else %>
-          <%= image_tag('sad-face.png', size: '100x100', class: "m-3 p-3") %>
+          <%= render 'sad_face' %>
         <% end %>
       </div>
     <% end %>
@@ -36,14 +36,14 @@
       <p class="lead"><%= quest.name %></p>
     <% end %>
   <% else %>
-    <%= image_tag('sad-face.png', size: '100x100', class: "m-3 p-3") %>
+    <%= render 'sad_face' %>
   <% end %>
 </div>
 
 <div class="jumbotron text-center" id="stats">
   <h3>Leaderboard</h3>
   <hr class="my-4">
-  <h4>Top Win Streaks</h4>
+  <h4 class="mb-4">Top Win Streaks</h4>
   <% if @top_3_win_streak.present? %>
     <ol class="pb-5" id="top-win-streak" style="display:inline-block">
       <% @top_3_win_streak.each do |streak| %>
@@ -51,6 +51,6 @@
       <% end %>
     </ol>
   <% else %>
-    <%= image_tag('sad-face.png', size: '100x100', class: "m-3 p-3") %>
+    <%= render 'sad_face' %>
   <% end %>
 </div>

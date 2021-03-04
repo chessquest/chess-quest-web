@@ -1,20 +1,22 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
-  <% won_games.each_with_index do |game, index| %>
-    <div class="col">
-      <div class="card">
-        <div id="gameBoard-<%=index%>" class="img-fluid"></div>
-        <div class="card-body">
-          <h5 class="card-title">Won</h5>
+  <% if won_games %>
+    <% won_games.each_with_index do |game, index| %>
+      <div class="col">
+        <div class="card">
+          <div id="gameBoard-<%=index%>" class="img-fluid"></div>
+          <div class="card-body">
+            <h5 class="card-title">Won</h5>
+          </div>
         </div>
       </div>
-    </div>
-    <script>
-      var currentConfig = {
-        position: "<%= game.fen %>",
-        pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
-      }
-      var board = Chessboard("gameBoard-<%=index%>", currentConfig)
-      $(window).resize(board.resize)
-    </script>
+      <script>
+        var currentConfig = {
+          position: "<%= game.fen %>",
+          pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
+        }
+        var board = Chessboard("gameBoard-<%=index%>", currentConfig)
+        $(window).resize(board.resize)
+      </script>
+    <% end %>
   <% end %>
 </div>
