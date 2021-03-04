@@ -25,8 +25,8 @@ body {
   background-color: #f5f5f5;
   font-family: 'Open-Dyslexic';
   font-size: 1.5rem;
+  overflow-x: hidden;
 }
-
 
 .flash__alert   {
  color: red;
@@ -50,5 +50,3 @@ body {
 .navbar-toggler-icon{
   font-size: 2em;
 }
-
-
