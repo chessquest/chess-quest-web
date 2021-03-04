@@ -121,7 +121,7 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       visit dashboard_path
 
       within '#stats' do
-        expect(page).to have_content("Current Quest Win Streak")
+        expect(page).to have_content("Top Win Streaks")
         within '#top-win-streak' do
           expect(page).to have_content("6")
           expect(page).to have_content("4")

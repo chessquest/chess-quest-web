@@ -1,3 +1,8 @@
+<p>In Chess Quest, you play with the pieces that were remaining at the end of the last game.</p>
+<p>Pick a starting board position based off famous Chess players' most recent games on Chess.com!</p>
+<p>— OR —</p>
+<p>Select 'Play Classic' to start from a full board.</p>
+<hr class="my-4">
 <%= form_with url: new_game_path, method: :post, local: true do |form| %>
   <%= form.select :player, [["IM Eric Rosen", "IMRosen"], ["WFM Alexandra Botez", "AlexandraBotez"], ["GM Magnus Carlsen", "MagnusCarlsen"], ["Play Classic", "PlayClassic"]], selected: "MagnusCarlsen" %>
   <div class="pt-3 d-flex justify-content-center">
