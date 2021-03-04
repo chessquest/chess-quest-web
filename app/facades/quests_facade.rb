@@ -39,6 +39,7 @@ class QuestsFacade
 			game = data[:included].select do |game|
 				game[:attributes][:status] == 'in_progress'
 			end.first
+			return nil if game.nil?
 			Game.new(game)
 		end
 	end
