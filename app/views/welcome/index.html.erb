@@ -3,3 +3,13 @@
 <section class='description'>
 <p>Thunderdome meets Hearthstone Arena meets Chess. Welcome to CHESS QUEST! Your journey starts with only the pieces remaining from a game! How far will your quest take you? <%= link_to "Sign in", user_google_oauth2_omniauth_authorize_path, method: :post %> to find out!</p>
 </section>
+
+</br>
+<h3 class="text-center m-3">Practice here!</h3>
+<div class="d-flex justify-content-center pt-3">
+  <div id="myBoard" style="width: 800px" class="img-fluid"></div>
+  <script>
+    board = Chessboard('myBoard', config)
+    $(window).resize(board.resize)
+  </script>
+</div>
