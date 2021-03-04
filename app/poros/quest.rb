@@ -7,5 +7,4 @@ class Quest
     @status = data[:attributes][:status]
     @name = data[:attributes][:name]
   end
-
 end

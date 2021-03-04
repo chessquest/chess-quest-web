@@ -6,6 +6,11 @@
       "status": "completed",
       "user_id": "12",
       "name": "Completed Quest Magic"
+    },
+    "included": {
+      "games": {
+        "data": []
+      }
     }
   }]
 }

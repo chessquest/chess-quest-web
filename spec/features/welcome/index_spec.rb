@@ -5,6 +5,7 @@ describe 'Welcome Index', type: :feature do
     allow(QuestsFacade).to receive(:get_current_quest).and_return([])
     allow(QuestsFacade).to receive(:get_completed_quests).and_return([])
     allow(QuestsFacade).to receive(:get_current_win_streak).and_return([])
+    allow(QuestsFacade).to receive(:get_current_game).and_return([])
     allow(GamesFacade).to receive(:get_top_3_quest_streak).and_return([])
   end
   
