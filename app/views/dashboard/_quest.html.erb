@@ -2,5 +2,7 @@
   <%= quest.name %>
   <% if current_game.nil? %>
     <%= render "game_selection" %>
+  <% else %>
+    <%= button_to "Continue Quest", gameplay_path(current_game.id), method: :get %>
   <% end %>
 </section>
