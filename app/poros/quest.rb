@@ -5,6 +5,6 @@ class Quest
     @id = data[:id]
     @user_id = data[:attributes][:user_id]
     @status = data[:attributes][:status]
-    @name = data[:attributes][:name]
+    @name = "Quest for the #{Faker::Games::ElderScrolls.jewelry} or something"
   end
 end
