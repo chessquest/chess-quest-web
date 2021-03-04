@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
   <div class="container-fluid">
-    <%= image_tag "pngwing.com.png", size: "60x60" %>
-    <%= link_to "Chess Quest", root_path, class: "navbar-brand pl-3" %>
+    <%= image_tag "pngwing.com.png", size: "80x80", onclick: "$(this).toggleClass('clicked-90')"; %>
+    <%= link_to "Chess Quest", root_path, class: "navbar-brand pl-3", style: 'font-size: 2.5rem;' %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse text-right pt-3" id="navbarNav">
       <ul class="navbar-nav mr-auto">
         <% if user_signed_in? %>
           <li class="nav-item">
