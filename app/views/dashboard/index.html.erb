@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-  <h1>User Dashboard</h1>
+  <h1>Dashboard</h1>
   <hr class="my-4">
   <p>Welcome to Chess Quest, <%= current_user.email %>!</p>
 </div>
@@ -11,12 +11,12 @@
     <% if !@current_quest %>
       <p>In Chess Quest, you play with the pieces that were remaining at the end of the last game.</p>
       <p>Start a Quest to Play</p>
-      <%= button_to 'Start Quest', new_quest_path, method: :post, class: "btn btn-primary mt-3" %>
+      <%= button_to 'Start Quest', new_quest_path, method: :post, class: "btn btn-lg btn-primary mt-3" %>
     <% else %>
       <div class="pt-3">
         <%= render partial: 'quest', collection: @current_quest, locals: {current_game: @current_game} %>
         <hr class="my-4">
-        <h4>Current Quest Win Streak</h4>
+        <h4 class="pt-3">Current Quest Win Streak</h4>
         <% if @current_win_streak.present? %>
           <p class="lead"><%= @current_win_streak %></p>
           <%= render partial: 'boards', locals: {won_games: @won_games}%>
