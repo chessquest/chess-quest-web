@@ -38,3 +38,7 @@ body {
 .flash__success {
   color: green;
 }
+
+.clicked {
+  transform: rotate(180deg);
+}
