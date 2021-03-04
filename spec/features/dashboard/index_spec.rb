@@ -123,11 +123,40 @@ RSpec.describe 'Dashboard Show Page', type: :feature do
       within '#stats' do
         expect(page).to have_content("Current Quest Win Streak")
         within '#top-win-streak' do
-        expect(page).to have_content("6")
-        expect(page).to have_content("4")
-        expect(page).to have_content("2")
+          expect(page).to have_content("6")
+          expect(page).to have_content("4")
+          expect(page).to have_content("2")
         end
       end
+    end
+
+    it 'gets the current game if there is one' do
+      json_response = File.read("./spec/fixtures/quest_with_current_game.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=in_progress").
+      to_return(status: 200, body: json_response)
+
+      json_response = File.read("./spec/fixtures/no_quests.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/quests?status=completed").
+        to_return(status: 200, body: json_response)
+
+      visit root_path
+
+      click_link 'Sign In With Google'
+
+      visit dashboard_path
+
+      within '.current-quest' do
+        expect(page).to have_button("Continue Quest")
+
+      end
+
+      json_response = File.read("./spec/fixtures/game3.json")
+      stub_request(:get, "https://chess-quest-api.herokuapp.com/api/v1/users/#{@user.id}/games/3").
+        to_return(status: 200, body: json_response)
+      
+      click_button "Continue Quest"
+
+      expect(current_path).to eq(gameplay_path(3))
     end
   end
 end
