@@ -15,6 +15,13 @@ class QuestsFacade
 			end
 		end
 
+		def get_won_games(user)
+			data = QuestService.call_current_quest(user)
+			if data.present? && data[:data].present? 
+				find_won_games(data)
+			end
+		end
+
 		def get_completed_quests(user)
 			data = QuestService.call_completed_quests(user)
 			if data.present? && data[:data].present?
@@ -41,6 +48,17 @@ class QuestsFacade
 			end.first
 			return nil if game.nil?
 			Game.new(game)
+		end
+
+		def find_won_games(data)
+			return nil if !data[:included]
+			games = data[:included].select do |game|
+				game[:attributes][:status] == 'won'
+			end
+			return nil if games.empty?
+			games.map do |game|
+				Game.new(game)
+			end
 		end
 	end
 end
