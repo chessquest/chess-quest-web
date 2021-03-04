@@ -1,5 +1,6 @@
-<h3 class="text-center">Good Luck!</h3>
-<div class="d-flex justify-content-center pt-5">
+<h3 class="text-center m-3">Good Luck!</h3>
+<div class="container d-flex justify-content-center p-3"><%= button_to "Back to Dashboard", dashboard_path, method: :get, class: 'btn btn-secondary btn-large'%></div>
+<div class="d-flex justify-content-center pt-3">
   <div id="myBoard" style="width: 800px"></div>
   <%= render "game_over" %>
   <script>
@@ -64,5 +65,3 @@
     board = Chessboard('myBoard', game_config)
   </script>
 </div>
-
-<div class="container d-flex justify-content-center pt-5"><%= button_to "Back to Dashboard", dashboard_path, method: :get, class: 'btn btn-secondary btn-large'%></div>

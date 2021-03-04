@@ -3,6 +3,6 @@
   <% if current_game.nil? %>
     <%= render "game_selection" %>
   <% else %>
-    <%= button_to "Continue Quest", gameplay_path(current_game.id), method: :get, class: 'btn btn-primary mb-3' %>
+    <%= button_to "Continue Quest", gameplay_path(current_game.id), method: :get, class: 'btn btn-primary mt-3' %>
   <% end %>
 </section>
