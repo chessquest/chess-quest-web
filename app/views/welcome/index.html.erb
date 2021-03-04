@@ -5,12 +5,16 @@
 </section>
 
 </br>
-<h6 class="text-center m-3">Practice here!</h6>
+<section class="text-center m-3">
+  <button id="startPositionBtn">Practice Board, click to reset!</button>
+</section>
 <div class="d-flex justify-content-center pt-3">
   <div id="myBoard" style="width: 600px" class="img-fluid"></div>
   <script>
     var game = new Chess()
     board = Chessboard('myBoard', config)
     $(window).resize(board.resize)
+    $('#startPositionBtn').on('click', board.start)
   </script>
 </div>
+
