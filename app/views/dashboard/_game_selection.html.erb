@@ -6,6 +6,6 @@
 <%= form_with url: new_game_path, method: :post, local: true do |form| %>
   <%= form.select :player, [["IM Eric Rosen", "IMRosen"], ["WFM Alexandra Botez", "AlexandraBotez"], ["GM Magnus Carlsen", "MagnusCarlsen"], ["Play Classic", "PlayClassic"]], selected: "MagnusCarlsen" %>
   <div class="pt-3 d-flex justify-content-center">
-    <%= form.submit 'Start Game', class: "btn btn-primary" %>
+    <%= form.submit 'Start Game', class: "btn btn-lg btn-primary" %>
   </div>
 <% end %>

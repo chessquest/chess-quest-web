@@ -1,8 +1,8 @@
 <section class="current-quest">
-  <%= quest.name %>
+  <p class="lead"><%= quest.name %></p>
   <% if current_game.nil? %>
     <%= render "game_selection" %>
   <% else %>
-    <%= button_to "Continue Quest", gameplay_path(current_game.id), method: :get, class: 'btn btn-primary mt-3' %>
+    <%= button_to "Continue Quest", gameplay_path(current_game.id), method: :get, class: 'btn btn-lg btn-primary m-3' %>
   <% end %>
 </section>
