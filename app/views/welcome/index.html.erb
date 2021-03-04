@@ -5,10 +5,11 @@
 </section>
 
 </br>
-<h3 class="text-center m-3">Practice here!</h3>
+<h6 class="text-center m-3">Practice here!</h6>
 <div class="d-flex justify-content-center pt-3">
-  <div id="myBoard" style="width: 800px" class="img-fluid"></div>
+  <div id="myBoard" style="width: 600px" class="img-fluid"></div>
   <script>
+    var game = new Chess()
     board = Chessboard('myBoard', config)
     $(window).resize(board.resize)
   </script>
