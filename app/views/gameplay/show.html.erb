@@ -1,6 +1,6 @@
 <h3 class="text-center">Good Luck!</h3>
 <div class="d-flex justify-content-center pt-5">
-  <div id="myBoard" style="width: 800px"></div>
+  <div id="myBoard" style="width: 800px" class="img-fluid"></div>
   <%= render "game_over" %>
   <script>
     function onSnapEndOurs () {
@@ -62,6 +62,7 @@
       pieceTheme: "/assets/chesspieces/wikipedia/{piece}.png"
     }
     board = Chessboard('myBoard', game_config)
+    $(window).resize(board.resize)
   </script>
 </div>
 
