@@ -1,56 +1,58 @@
-<div class="jumbotron text-center">
-  <h1>Dashboard</h1>
-  <hr class="my-4">
-  <p>Welcome to Chess Quest, <%= current_user.email %>!</p>
-</div>
-
-<div class="jumbotron text-center">
-  <div>
-    <h3>Current Quest</h3>
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1>Dashboard</h1>
     <hr class="my-4">
-    <% if !@current_quest %>
-      <p>In Chess Quest, you play with the pieces that were remaining at the end of the last game.</p>
-      <p>Start a Quest to Play</p>
-      <%= button_to 'Start Quest', new_quest_path, method: :post, class: "btn btn-lg btn-primary mt-3" %>
+    <p>Welcome to Chess Quest, <%= current_user.email %>!</p>
+  </div>
+
+  <div class="jumbotron text-center">
+    <div>
+      <h3>Current Quest</h3>
+      <hr class="my-4">
+      <% if !@current_quest %>
+        <p>In Chess Quest, you play with the pieces that were remaining at the end of the last game.</p>
+        <p>Start a Quest to Play</p>
+        <%= button_to 'Start Quest', new_quest_path, method: :post, class: "btn btn-lg btn-primary mt-3" %>
+      <% else %>
+        <div class="pt-3">
+          <%= render partial: 'quest', collection: @current_quest, locals: {current_game: @current_game} %>
+          <hr class="my-4">
+          <h4 class="pt-3">Current Quest Win Streak</h4>
+          <% if @current_win_streak.present? %>
+            <p class="lead"><%= @current_win_streak %></p>
+            <%= render partial: 'boards', locals: {won_games: @won_games}%>
+          <% else %>
+            <%= render 'sad_face' %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="jumbotron text-center">
+    <h3>Completed Quests</h3>
+    <hr class="my-4">
+    <% if @completed_quests %>
+      <% @completed_quests.each do |quest| %>
+        <p class="lead"><%= quest.name %></p>
+      <% end %>
     <% else %>
-      <div class="pt-3">
-        <%= render partial: 'quest', collection: @current_quest, locals: {current_game: @current_game} %>
-        <hr class="my-4">
-        <h4 class="pt-3">Current Quest Win Streak</h4>
-        <% if @current_win_streak.present? %>
-          <p class="lead"><%= @current_win_streak %></p>
-          <%= render partial: 'boards', locals: {won_games: @won_games}%>
-        <% else %>
-          <%= render 'sad_face' %>
-        <% end %>
-      </div>
+      <%= render 'sad_face' %>
     <% end %>
   </div>
-</div>
 
-<div class="jumbotron text-center">
-  <h3>Completed Quests</h3>
-  <hr class="my-4">
-  <% if @completed_quests %>
-    <% @completed_quests.each do |quest| %>
-      <p class="lead"><%= quest.name %></p>
+  <div class="jumbotron text-center" id="stats">
+    <h3>Leaderboard</h3>
+    <hr class="my-4">
+    <h4 class="mb-4">Top Win Streaks</h4>
+    <% if @top_3_win_streak.present? %>
+      <ol class="pb-5" id="top-win-streak" style="display:inline-block">
+        <% @top_3_win_streak.each do |streak| %>
+          <li><p class="lead"><%= streak %> Games Won</p></li>
+        <% end %>
+      </ol>
+    <% else %>
+      <%= render 'sad_face' %>
     <% end %>
-  <% else %>
-    <%= render 'sad_face' %>
-  <% end %>
-</div>
-
-<div class="jumbotron text-center" id="stats">
-  <h3>Leaderboard</h3>
-  <hr class="my-4">
-  <h4 class="mb-4">Top Win Streaks</h4>
-  <% if @top_3_win_streak.present? %>
-    <ol class="pb-5" id="top-win-streak" style="display:inline-block">
-      <% @top_3_win_streak.each do |streak| %>
-        <li><p class="lead"><%= streak %> Games Won</p></li>
-      <% end %>
-    </ol>
-  <% else %>
-    <%= render 'sad_face' %>
-  <% end %>
+  </div>
 </div>
