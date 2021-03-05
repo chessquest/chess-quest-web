@@ -14,11 +14,20 @@
   </head>
 
   <body>
-  <%= render partial: 'shared/navbar' %>
+    <%= render partial: 'shared/navbar' %>
 
-  <div class="container">
-    <%= render partial: "shared/flash" %>
-  </div>
-  <%= yield %>
+    <div class="container">
+      <%= render partial: "shared/flash" %>
+    </div>
+    <%= yield %>
   </body>
+  <footer class="footer">
+    <div class="container-fluid bg-dark p-5">
+      <div class="container text-light text-center", id="footer">
+        <p><%= link_to 'Find us on GitHub', 'https://github.com/chessquest', class: 'text-info' %></p>
+        <%= image_tag "pngwing.com.png", size: "80x80", class: 'm-3', onclick: "$(this).toggleClass('clicked-90')"; %>
+        <p class="mt-3">Built by a team of 7 backend engineering students at <%= link_to 'Turing School', 'https://turing.io', class: 'text-info' %></p>
+      </div>
+    </div>
+  </footer>
 </html>
