@@ -2,16 +2,14 @@
   <div class="jumbotron text-center">
     <h1>Dashboard</h1>
     <hr class="my-4">
-    <p>Welcome to Chess Quest, <%= current_user.email %>!</p>
+    <p class="lead">Welcome to Chess Quest, <%= current_user.email %>!</p>
   </div>
 
   <div class="jumbotron text-center">
     <div>
       <h3>Current Quest</h3>
-      <hr class="my-4">
       <% if !@current_quest %>
-        <p>In Chess Quest, you play with the pieces that were remaining at the end of the last game.</p>
-        <p>Start a Quest to Play</p>
+        <p class="lead">In Chess Quest, you play with the pieces that were remaining at the end of the last game.</p>
         <%= button_to 'Start Quest', new_quest_path, method: :post, class: "btn btn-lg btn-primary mt-3" %>
       <% else %>
         <div class="pt-3">

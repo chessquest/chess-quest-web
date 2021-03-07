@@ -1,5 +1,6 @@
 <section class="current-quest">
   <p class="lead"><%= quest.name %></p>
+  <hr class="my-4">
   <% if current_game.nil? %>
     <%= render "game_selection" %>
   <% else %>
